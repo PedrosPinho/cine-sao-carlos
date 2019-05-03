@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cine Araújo</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/materialize.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./js/materialize.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Cinema</a>
+        </div>
+    </nav>
+    <div class="carousel carousel-slider">
+        <a class="carousel-item" href="#one!"><img src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg"></a>
+    </div>
+    <nav class="nav-center" role="navigation">
+        <div class="nav-wrapper container">
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/help">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        let options = {
+            indicators: true
+        };
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, options);
+            setInterval(function() {instances[0].next()}, 3000)
+        });
+
+    </script>
+</body>
+
+</html>
