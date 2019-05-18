@@ -8,39 +8,171 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./css/materialize.css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="./js/materialize.js"></script>
+    <script></script>
 </head>
 
-<body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Cinema</a>
-        </div>
-    </nav>
-    <div class="carousel carousel-slider">
-        <a class="carousel-item" href="#one!"><img src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg"></a>
-        <a class="carousel-item" href="#three!"><img src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg"></a>
-    </div>
-    <nav class="nav-center" role="navigation">
-        <div class="nav-wrapper container">
-            <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/help">Help</a></li>
+<header class="navbar-fixed">
+    <nav class="nav-center">
+        <div class=" nav-wrapper different-grey">
+            <a href="#" class="brand-logo">Cine Sao Carlos</a>
+            <ul id="nav-mobile" class="hide-on-med-and-down">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cartaz">Em cartaz</a></li>
+                <li><a href="#">Proximos</a></li>
+                <li><a href="#">Informacoes</a></li>
+                <li><a href="#">Sobre</a></li>
             </ul>
         </div>
     </nav>
+</header>
+
+<body>
+    <div id="home" class="carousel carousel-slider">
+        <a class="carousel-item" href="#one!"><img
+                src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg">
+            <div class="row indicators black"><span class="col s4">Vingadores Ultimato</span><span
+                    class="col s4 blue-grey-text"> 180 min </span><span class="col s4 blue-grey-text"> Mais Informacoes
+                </span></div>
+        </a>
+        <a class="carousel-item" href="#two!"><img
+                src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg">
+            <div class="row indicators black"><span class="col s4">Vingadores Ultimato</span><span
+                    class="col s4 blue-grey-text"> 180 min </span><span class="col s4 blue-grey-text"> Mais Informacoes
+                </span></div>
+        </a>
+        <a class="carousel-item" href="#three!"><img
+                src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg">
+            <div class="row indicators black"><span class="col s4">Vingadores Ultimato</span><span
+                    class="col s4 blue-grey-text"> 180 min </span><span class="col s4 blue-grey-text"> Mais Informacoes
+                </span></div>
+        </a>
+        <a class="carousel-item" href="#four!"><img
+                src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg">
+            <div class="row indicators black"><span class="col s4">Vingadores Ultimato</span><span
+                    class="col s4 blue-grey-text"> 180 min </span><span class="col s4 blue-grey-text"> Mais Informacoes
+                </span></div>
+        </a>
+    </div>
+    <!-- <div class="row" >
+        <div class="col s12 grey darken-3">
+            Info
+        </div> -->
+    </div>
+    <div id="cartaz" class="row center">
+        <div class="col s1"></div>
+        <div class="col s10" style="margin-top: 2%;">
+            <ul class="tabs z-depth-1 tabs-fixed-width">
+                <li class="tab"><a href="#seg">Segunda</a></li>
+                <li class="tab"><a href="#ter">Terca</a></li>
+                <li class="tab"><a href="#qua">Quarta</a></li>
+                <li class="tab"><a href="#qui">Quinta</a></li>
+                <li class="tab"><a href="#sex">Sexta</a></li>
+                <li class="tab"><a href="#sab">Sabado</a></li>
+                <li class="tab"><a href="#dom">Domingo</a></li>
+            </ul>
+            <div id="seg" class="row">
+                <div class="card col s4 offset-s1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/office.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+                <div class="card col s4 offset-s2">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/office.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+                <div class="col col s1"></div>
+                <div class="card col s4 offset-s1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/office.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+                <div class="card col s4 offset-s2">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/office.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+                <div class="col col s1"></div>
+                
+
+            </div>
+            <div id="ter" class="col s12">
+                <p>CUUUUUUUUUU!22222222222</p>
+            </div>
+            <div id="qua" class="col s12">
+                <p>CUUUUUUUUUU!3333</p>
+            </div>
+            <div id="qui" class="col s12">
+                <p>CUUUUUUUUUU!4444444444</p>
+            </div>
+            <div id="sex" class="col s12">
+                <p>CUUUUUUUUUU!4555555555</p>
+            </div>
+            <div id="sab" class="col s12">
+                <p>CUUUUUUUUUU!6666666666</p>
+            </div>
+            <div id="dom" class="col s12">
+                <p>CUUUUUUUUUU!7777777</p>
+            </div>
+        </div>
+        <div class="col s1"></div>
+    </div>
+    <div style="margin-top: 10000px;">
+
+    </div>
     <script>
-        let options = {
+        let options_carrousel = {
             indicators: true
         };
+
         document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.carousel');
-            var instances = M.Carousel.init(elems, options);
-            setInterval(function() {instances[0].next()}, 3000)
-        });
+            let elems_carrousel = document.querySelectorAll('.carousel');
+            let instances_carrousel = M.Carousel.init(elems_carrousel, options_carrousel);
+            setInterval(function () { instances_carrousel[0].next() }, 50000);
+
+            let elems_tab = document.querySelectorAll('.tabs');
+            let instance_tabs = M.Tabs.init(elems_tab);
+        })
 
     </script>
 </body>

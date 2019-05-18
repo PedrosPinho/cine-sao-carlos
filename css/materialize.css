@@ -4,16 +4,26 @@
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
 
-nav.nav-center ul {
-  text-align: center;
-}
-nav.nav-center ul li {
-  display: inline;
-  float: none;
-}
-nav.nav-center ul li a {
-  display: inline-block;
-}
+ /* NAO EH DO MATERIALIZE */
+ body {
+   background: grey;
+ }
+ nav.nav-center ul {
+   text-align: center;
+  } 
+  nav.nav-center li a {
+    font-size: 2vmin;
+    padding-left: 2.5%; 
+    padding-right: 2.5%; 
+  } 
+  nav.nav-center ul li {
+    display: inline;
+    float: none;
+  }
+  nav.nav-center ul li a {
+    display: inline-block;
+  } 
+  /* NAO EH DO MATERIALIZE */
 
 .materialize-red {
   background-color: #e51c23 !important;
@@ -1967,6 +1977,10 @@ nav.nav-center ul li a {
   color: #3e2723 !important;
 }
 
+.different-grey {
+  background-color: #495251 !important;
+}
+
 .blue-grey {
   background-color: #607d8b !important;
 }
@@ -3592,6 +3606,10 @@ table span.badge {
   margin-left: 8.3333333333%;
 }
 
+/* .row .col.center-offset {
+  margin: 0 calc(8.3333333333%/2);
+} */
+
 .row .col.pull-s1 {
   right: 8.3333333333%;
 }
@@ -4341,6 +4359,7 @@ nav .sidenav-trigger i {
 }
 
 nav .brand-logo {
+  margin-left: 1vmin;
   position: absolute;
   color: #fff;
   display: inline-block;
