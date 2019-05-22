@@ -6,7 +6,7 @@
 
  /* NAO EH DO MATERIALIZE */
  body {
-   background: grey;
+   background: #efefef;
  }
  nav.nav-center ul {
    text-align: center;
@@ -4903,6 +4903,7 @@ small {
   top: 0;
   bottom: 0;
   width: 100%;
+  height: 200px;
 }
 
 .card .card-image .card-title {
@@ -4915,7 +4916,7 @@ small {
 }
 
 .card .card-content {
-  padding: 24px;
+  padding: 14px;
   border-radius: 0 0 2px 2px;
 }
 
@@ -9113,4 +9114,18 @@ input[type=range]::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem;
   }
+}
+.titles {
+  font-family: "Raleway";
+  width: 100%; 
+  height: 25px; 
+  border-bottom: 1px solid black; 
+  text-align: center;
+  margin: 5px 0px;
+}
+
+.titles span {
+  font-size: 40px; 
+  background-color: #efefef;
+  padding: 0 10px;
 }
