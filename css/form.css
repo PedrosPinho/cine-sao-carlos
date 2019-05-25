@@ -9,28 +9,23 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
   }
-  .container {
+  #container {
     background: white;
-    padding: 20px 25px;
-    border: 5px solid #26a69a;
-    width: 550px;
-    min-height: 500px;
-    height: auto;
+    border-radius: 10px;
+    width: 600px;
+    max-height: 600px;
+    height: 600px;
     box-sizing: border-box;
     position: relative;
   }
-  .col.s6 > .btn {
-     width: 100%;
-  }
-  .gender-male,.gender-female {
-    display: inline-block;
-  }
-  .gender-female {
-    margin-left: 35px;
-  }
-  radio:required {
-    border-color: red;
+  #insercao {
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 25px;
   }
   .container {
     animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
