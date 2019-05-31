@@ -83,7 +83,16 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Detetive Pikachu</span>
-                        <p><a href="#">Confira!</a></p>
+                        <p><a href="#trailer">Trailer</a></p>
+                        <div id="trailer" class="modal">
+                            <div class="modal-content">
+                              <h4>Modal Header</h4>
+                              <p>A bunch of text</p>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Detetive Pikachu<i
@@ -97,7 +106,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Vingadores: Ultimato</span>
-                        <p><a href="#">Confira!</a></p>
+                        <p><a href="#">Trailer</a></p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Card Title<i
@@ -112,7 +121,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Card Title</span>
-                        <p><a href="#">Confira!</a></p>
+                        <p><a href="#">Trailer</a></p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Card Title<i
@@ -126,7 +135,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Card Title</span>
-                        <p><a href="#">Confira!</a></p>
+                        <p><a href="#">Trailer</a></p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Card Title<i
@@ -186,7 +195,7 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">Card Titl</span>
-                    <p><a href="#">Confira!</a></p>
+                    <p><a href="#">Trailer</a></p>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Card Title<i
@@ -200,7 +209,7 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">Card Titl</span>
-                    <p><a href="#">Confira!</a></p>
+                    <p><a href="#">Trailer</a></p>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Card Title<i
@@ -227,7 +236,7 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">Card Titl</span>
-                    <p><a href="#">Confira!</a></p>
+                    <p><a href="#">Trailer</a></p>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Card Title<i
@@ -241,7 +250,7 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">Card Titl</span>
-                    <p><a href="#">Confira!</a></p>
+                    <p><a href="#">Trailer</a></p>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Card Title<i
@@ -265,10 +274,14 @@
         document.addEventListener('DOMContentLoaded', function () {
             let elems_carrousel = document.querySelectorAll('.carousel');
             let instances_carrousel = M.Carousel.init(elems_carrousel, options_carrousel);
-            setInterval(function () { instances_carrousel[0].next() }, 50000);
+            setInterval(function () { instances_carrousel[0].next() }, 10000);
 
             let elems_tab = document.querySelectorAll('.tabs');
             let instance_tabs = M.Tabs.init(elems_tab);
+
+            let elems_modal = document.querySelectorAll('.modal');
+            let instances_modal = M.Modal.init(elems_modal);  
+            // debugger;
         })
 
     </script>

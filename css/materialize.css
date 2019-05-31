@@ -3105,7 +3105,7 @@ td, th {
 }
 
 .collection {
-  margin: 0.5rem 0 1rem 0;
+  margin: 0;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   overflow: hidden;
@@ -3186,7 +3186,7 @@ td, th {
 .collection.with-header .collection-header {
   background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 .collection.with-header .collection-item {
