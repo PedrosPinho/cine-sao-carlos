@@ -21,7 +21,8 @@
                 <li><a href="#proximo">Proximos</a></li>
                 <li><a href="#informacoes">Informacoes</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="./login.html" class="brand-logo right"><i class="material-icons">account_circle</i></a></li>
+                <li><a href="./login.html" class="brand-logo right"><i class="material-icons">account_circle</i></a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -83,14 +84,16 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Detetive Pikachu</span>
-                        <p><a href="#trailer">Trailer</a></p>
+                        <a href="#trailer" class="modal-trigger">Trailer</a>
                         <div id="trailer" class="modal">
                             <div class="modal-content">
-                              <h4>Modal Header</h4>
-                              <p>A bunch of text</p>
+                                <iframe width="600" height="300" src="https://www.youtube.com/embed/4QRdB4RAQMs"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
                             </div>
                             <div class="modal-footer">
-                              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
                             </div>
                         </div>
                     </div>
@@ -188,38 +191,22 @@
                 Informações
             </span>
         </div>
-        <div class="row">
-            <div class="card col s4 offset-s1">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/office.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Titl</span>
-                    <p><a href="#">Trailer</a></p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i
-                            class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-            <div class="card col s4 offset-s2">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/office.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Titl</span>
-                    <p><a href="#">Trailer</a></p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i
-                            class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        <div class="row center" style="padding-top: 20px">
+            <div class="row valign-wrapper">
+                <div class="col s10 offset-s1 valign">
+                    <div class="card z-depth-5">
+                        <div class="card-content">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col col s1"></div>
-
-
 
         </div>
     </div>
@@ -229,39 +216,22 @@
                 Sobre
             </span>
         </div>
-        <div class="row">
-            <div class="card col s4 offset-s1">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/office.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Titl</span>
-                    <p><a href="#">Trailer</a></p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i
-                            class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-            <div class="card col s4 offset-s2">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/office.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Titl</span>
-                    <p><a href="#">Trailer</a></p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i
-                            class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        <div class="row" style="padding-top: 20px">
+            <div class="row valign-wrapper">
+                <div class="col s10 offset-s1 valign">
+                    <div class="card z-depth-5">
+                        <div class="card-content">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col col s1"></div>
-
-
-
         </div>
     </div>
 
@@ -270,7 +240,6 @@
         let options_carrousel = {
             indicators: true
         };
-
         document.addEventListener('DOMContentLoaded', function () {
             let elems_carrousel = document.querySelectorAll('.carousel');
             let instances_carrousel = M.Carousel.init(elems_carrousel, options_carrousel);
@@ -280,9 +249,10 @@
             let instance_tabs = M.Tabs.init(elems_tab);
 
             let elems_modal = document.querySelectorAll('.modal');
-            let instances_modal = M.Modal.init(elems_modal);  
-            // debugger;
+            let instances_modal = M.Modal.init(elems_modal);
+
         })
+
 
     </script>
 </body>
