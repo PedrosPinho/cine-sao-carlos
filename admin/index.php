@@ -1,3 +1,7 @@
+<?php
+include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
+protegePagina(); // Chama a função que protege a página
+?>
 <!DOCTYPE html>
 <html>
 
@@ -5,10 +9,10 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Cine Araújo</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/materialize.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/form.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/materialize.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/form.css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="./js/materialize.js"></script>
+    <script src="../js/materialize.js"></script>
     <script></script>
 </head>
 
@@ -22,13 +26,13 @@
                 </ul>
             </div>
             <div id="insercao" class="col s12">
-                <form class="col s12" id="reg-form">
+                <form class="col s12" id="reg-form" method="post" action="add_movie.php">
                     <div class="row">
                         <div class="input-field col s6" style="padding-right: 5px">
                             <div class="file-field">
                                 <div class="btn">
                                     <span>File</span>
-                                    <input type="file">
+                                    <input type="file" name="img"/>
                                 </div>
                                 <div class="file-path-wrapper">
                                     <input class="file-path validate" type="text">
@@ -36,48 +40,48 @@
                             </div>
                         </div>
                         <div class="input-field col s6" style="padding-left: 5px">
-                            <input id="Nome" type="text" class="validate" required>
+                            <input id="Nome" type="text" class="validate" name="nome" required>
                             <label for="Nome">Nome do Filme</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="Nome" type="url" class="validate" required>
+                            <input id="Nome" type="url" class="validate" name="link_trailer" required>
                             <label for="Nome">Trailer (Youtube)</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6" style="padding-right: 5px">
-                            <select required>
-                                <option value="" disabled selected>Nenhum</option>
-                                <option value="dublado">Dublado</option>
-                                <option value="legendado">Legendado</option>
+                            <select name="legendado" required>
+                                <option disabled selected>Nenhum</option>
+                                <option value="0">Dublado</option>
+                                <option value="1">Legendado</option>
                             </select>
                             <label>Dublado ou Legendado</label>
                         </div>
                         <div class="input-field col s6" style="padding-left: 5px">
-                            <select required>
+                            <select name="3d" required>
                                 <option value="" disabled selected>Nenhum</option>
-                                <option value="3d">3D</option>
-                                <option value="2d">2D</option>
+                                <option value="1">3D</option>
+                                <option value="0">2D</option>
                             </select>
                             <label>3D ou 2D</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6" style="padding-right: 5px">
-                            <input id="dateInicial" type="date" class="datepicker" required />
+                            <input id="dateInicial" type="date" class="datepicker" name="data_inicial" required />
                             <label for="dateInicial">Data Inicial</label>
                         </div>
                         <div class="input-field col s6" style="padding-left: 5px">
-                            <input id="dateFinal" type="date" class="datepicker" required />
+                            <input id="dateFinal" type="date" class="datepicker" name="data_final" required />
                             <label for="dateFinal">Data Final</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <textarea type="sinopse" class="materialize-textarea" style="max-height: 50px"
-                                required></textarea>
+                                name="sinopse" required></textarea>
                             <label for="sinopse">Sinopse</label>
                         </div>
                     </div>
