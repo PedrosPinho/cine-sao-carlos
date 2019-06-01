@@ -7,6 +7,8 @@
  /* NAO EH DO MATERIALIZE */
  body {
    background: #efefef;
+   overflow-x: hidden;
+   width: 100vw
  }
  nav.nav-center ul {
    text-align: center;
@@ -3497,7 +3499,7 @@ table span.badge {
 .row {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .row:after {
@@ -4782,7 +4784,7 @@ small {
   transition: -webkit-box-shadow .25s;
   transition: box-shadow .25s;
   transition: box-shadow .25s, -webkit-box-shadow .25s;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .card .card-title {
@@ -9131,4 +9133,42 @@ input[type=range]::-ms-thumb {
   font-size: 40px; 
   background-color: #efefef;
   padding: 0 10px;
+}
+
+.frame {
+  width: 50vw; 
+  height: 60vh;
+}
+
+.divIframe {
+  overflow:hidden;
+  width: 100%;
+  position: relative;
+}
+
+@media only screen and (min-width: 601px) {
+  .frame {
+    width: 100vw; 
+    height: 60vh;
+  }
+
+  .divIframe {
+  overflow:hidden;
+  width: 100vw;
+  position: relative;
+  }
+}
+
+#bottom {
+  clear: both;
+  margin:0;
+  padding:0;
+  text-align:center;
+  background-color: #000;
+  padding: 5px;
+}
+
+#bottom .img {
+  width: 50px;
+  height: auto;
 }
