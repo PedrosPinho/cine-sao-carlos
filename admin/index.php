@@ -70,11 +70,11 @@ protegePagina(); // Chama a função que protege a página
                     </div>
                     <div class="row">
                         <div class="input-field col s6" style="padding-right: 5px">
-                            <input id="dateInicial" type="date" class="datepicker" name="data_inicial"   />
+                            <input id="dateInicial" type="text" class="datepicker" name="data_inicial"   />
                             <label for="dateInicial">Data Inicial</label>
                         </div>
                         <div class="input-field col s6" style="padding-left: 5px">
-                            <input id="dateFinal" type="date" class="datepicker" name="data_final"   />
+                            <input id="dateFinal" type="text" class="datepicker" name="data_final"   />
                             <label for="dateFinal">Data Final</label>
                         </div>
                     </div>

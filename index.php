@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Cine Sao Carlos</title>
+    <title>Cine São Carlos</title>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/materialize.css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="./js/materialize.js"></script>
@@ -14,7 +14,7 @@
 <header class="navbar-fixed">
     <nav class="nav-center">
         <div class=" nav-wrapper black">
-            <a href="#" class="brand-logo">Cine Sao Carlos</a>
+            <a href="#" class="brand-logo">Cine São Carlos</a>
             <ul id="nav-mobile" class="hide-on-med-and-down">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#cartaz">Em cartaz</a></li>
