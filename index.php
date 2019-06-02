@@ -117,10 +117,10 @@
                         <div class="card z-depth-5"
                             style="height: 60vh; overflow: auto; padding: 20px; margin: 0.5rem 8px 1rem 8px">
                             <div class="col s12 ">
-                                <img src="./assets/img/preços.jpg"></img>
+                                <img src="./assets/img/preços.jpg">
                             </div>
                             <div class="col s12">
-                                <img src="./assets/img/meia-entrada.png"></img>
+                                <img src="./assets/img/meia-entrada.png">
                             </div>
                         </div>
                     </div>
@@ -225,6 +225,7 @@
             let instance_tabs = M.Tabs.init(elems_tab);
 
             let elems_modal = document.querySelectorAll('.modal');
+            debugger
             let instances_modal = M.Modal.init(elems_modal);
 
         })

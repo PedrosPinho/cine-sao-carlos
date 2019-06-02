@@ -1,6 +1,5 @@
 <?php
 include("./admin/connect.php");
-get_movies_from_db();
 function get_movies_from_db() {
     $conn = OpenCon();
     $resultado = $conn->query('SELECT * FROM `filme`');
@@ -37,9 +36,10 @@ function make_info_card($movie, $count) {
             </div>
             </div>
             <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">'.$movie["nome"].'<i
-            class="material-icons right">Fechar</i></span>
-            <p>'.$movie["sinopse"].'</p>
+            <span class="card-title grey-text text-darken-4">'.$movie["nome"].'</span>
+            <p class="grey-text text-darken-4">'.isLeg_3d("Leg", $movie["legendado"]).'</p>
+            <p class="grey-text text-darken-4">'.isLeg_3d("a", $movie["3d"]).'</p>
+            <p>Sinopse: '.$movie["sinopse"].'</p>
             </div>
             </div>';
     } elseif ($count%2==0) {
@@ -64,9 +64,10 @@ function make_info_card($movie, $count) {
             </div>
             </div>
             <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">'.$movie["nome"].'<i
-            class="material-icons right">Fechar</i></span>
-            <p>'.$movie["sinopse"].'</p>
+            <span class="card-title grey-text text-darken-4">'.$movie["nome"].'</span>
+            <p class="grey-text text-darken-4">'.isLeg_3d("Leg", $movie["legendado"]).'</p>
+            <p class="grey-text text-darken-4">'.isLeg_3d("a", $movie["3d"]).'</p>
+            <p>Sinopse: '.$movie["sinopse"].'</p>
             </div>
             </div>';
     } else { 
@@ -91,9 +92,10 @@ function make_info_card($movie, $count) {
             </div>
             </div>
             <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">'.$movie["nome"].'<i
-            class="material-icons right">Fechar</i></span>
-            <p>'.$movie["sinopse"].'</p>
+            <span class="card-title grey-text text-darken-4">'.$movie["nome"].'</span>
+            <p class="grey-text text-darken-4">'.isLeg_3d("Leg", $movie["legendado"]).'</p>
+            <p class="grey-text text-darken-4">'.isLeg_3d("a", $movie["3d"]).'</p>
+            <p>Sinopse: '.$movie["sinopse"].'</p>
             </div>
             </div>';
     }
@@ -101,12 +103,47 @@ function make_info_card($movie, $count) {
 }
 function getmovies() {
     $movies = get_movies_from_db();
-    $count = 0;
     $cards = "";
-    foreach ($movies as $movie){
-        $cards .= make_info_card($movie, $count);
-        $count++;
+    $week = ["dom", "seg", "ter", "qua", "qui", "sex", "sab"];
+    $today = date("w");
+    $da = 0;
+    $d = '';
+    foreach($week as $day) {
+        $d .= getWeekDay($today, $da);
+        $count = 0;
+        $cards .= '<div id="'.$day.'" class="col s12">';
+        foreach ($movies as $movie){
+            if ($movie['data_inicio'] <= $d && $d <= $movie['data_fim']) {
+                $cards .= make_info_card($movie, $count);
+                $count++;
+            }
+        }
+        $cards .= "</div>";
+        $da++;
     }
     return $cards;
+}
+function getWeekDay ($today, $day) {
+    $day_in_m = 86400000;
+    $d = date("Y-m-d");
+    if ($day == $today-1) {
+        return $d;
     }
+    else {
+        $i = ($today-1) + $day;
+        $data =(int)strtotime("+".$i." day");
+        $temp = date("Y-m-d", $data);
+        return $temp;
+    }
+    
+}
+function isLeg_3d($type, $bool) {
+    if ($type == "Leg") {
+        if($bool == 1) return "Legendado";
+        else return "Dublado";
+    } else {
+        if($bool == 1) return "3D";
+        else return "2D";
+    }
+}
 ?>
