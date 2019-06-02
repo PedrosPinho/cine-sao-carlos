@@ -77,97 +77,10 @@
                 <li class="tab"><a href="#sab">Sabado</a></li>
                 <li class="tab"><a href="#dom">Domingo</a></li>
             </ul>
-            <div id="seg" class="row">
-                <div class="card col s10 offset-s1 m4 offset-m1">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="../cine-sao-carlos/assets/img/pikachu.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Detetive Pikachu</span>
-                        <a href="#trailer" class="modal-trigger">Trailer</a>
-                        <div id="trailer" class="modal">
-                            <div class="modal-content">
-                                <iframe width="600" height="300" src="https://www.youtube.com/embed/4QRdB4RAQMs"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Detetive Pikachu<i
-                                class="material-icons right">close</i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-                <div class="card col s10 offset-s1 m4 offset-m2">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="../cine-sao-carlos/assets/img/vingadores.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Vingadores: Ultimato</span>
-                        <p><a href="#">Trailer</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title<i
-                                class="material-icons right">close</i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-                <div class="col col m1"></div>
-                <div class="card col s10 offset-s1 m4 offset-m1">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/office.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Card Title</span>
-                        <p><a href="#">Trailer</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title<i
-                                class="material-icons right">close</i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-                <div class="card col s10 offset-s1 m4 offset-m2">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/office.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Card Title</span>
-                        <p><a href="#">Trailer</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title<i
-                                class="material-icons right">close</i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-                <div class="col col m1"></div>
-
-
-            </div>
-            <div id="ter" class="col s12">
-                <p>CUUUUUUUUUU!22222222222</p>
-            </div>
-            <div id="qua" class="col s12">
-                <p>CUUUUUUUUUU!3333</p>
-            </div>
-            <div id="qui" class="col s12">
-                <p>CUUUUUUUUUU!4444444444</p>
-            </div>
-            <div id="sex" class="col s12">
-                <p>CUUUUUUUUUU!4555555555</p>
-            </div>
-            <div id="sab" class="col s12">
-                <p>CUUUUUUUUUU!6666666666</p>
-            </div>
-            <div id="dom" class="col s12">
-                <p>CUUUUUUUUUU!7777777</p>
-            </div>
+            <?php
+                include("./functions/get_movies_week.php");
+                echo getmovies();
+            ?>
         </div>
         <div class="col s1"></div>
     </div>

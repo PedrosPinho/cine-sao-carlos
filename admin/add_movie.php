@@ -13,10 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data_inicio = (isset($_POST['data_inicio'])) ? $_POST['data_inicio'] : '';
     $data_fim = (isset($_POST['data_fim'])) ? $_POST['data_fim'] : '';
     $sinopse = (isset($_POST['sinopse'])) ? $_POST['sinopse'] : '';
-    $img = (isset($_POST['img'])) ? $_POST['img'] : null;
-
+    // echo ;
     $conn = OpenCon();
-    $conn->query('INSERT INTO `filme` (`nome`, `link_trailer`, `legendado`, `3d`, `data_inicio`, `data_fim`, `sinopse`, `img`)  VALUES ("'.$nome.'", "'.$link_trailer.'", "'.$legendado.'", "'.$dim.'", "'.$data_inicio.'","'.$data_fim.'", "'.$sinopse.'", "'.$img.'")');
+    echo $conn->query('INSERT INTO `filme` (`nome`, `link_trailer`, `legendado`, `3d`, `data_inicio`, `data_fim`, `sinopse`, `img`)  VALUES ("'.$nome.'", "'.$link_trailer.'", "'.$legendado.'", "'.$dim.'", "'.$data_inicio.'","'.$data_fim.'", "'.$sinopse.'", "'.mysqli_escape_string($conn, file_get_contents($_FILES["img"]["tmp_name"])).'")');
     header("Location: index.php");
 }
 

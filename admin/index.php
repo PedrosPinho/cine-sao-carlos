@@ -26,7 +26,7 @@ protegePagina(); // Chama a função que protege a página
                 </ul>
             </div>
             <div id="insercao" class="col s12">
-                <form class="col s12" id="reg-form" method="post" action="add_movie.php">
+                <form class="col s12" id="reg-form" enctype="multipart/form-data" method="post" action="add_movie.php">
                     <div class="row">
                         <div class="input-field col s6" style="padding-right: 5px">
                             <div class="file-field">
@@ -40,19 +40,19 @@ protegePagina(); // Chama a função que protege a página
                             </div>
                         </div>
                         <div class="input-field col s6" style="padding-left: 5px">
-                            <input id="Nome" type="text" class="validate" name="nome" required>
+                            <input id="Nome" type="text" class="validate" name="nome"  >
                             <label for="Nome">Nome do Filme</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="Nome" type="url" class="validate" name="link_trailer" required>
+                            <input id="Nome" type="url" class="validate" name="link_trailer"  >
                             <label for="Nome">Trailer (Youtube)</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6" style="padding-right: 5px">
-                            <select name="legendado" required>
+                            <select name="legendado"  >
                                 <option disabled selected>Nenhum</option>
                                 <option value="0">Dublado</option>
                                 <option value="1">Legendado</option>
@@ -60,7 +60,7 @@ protegePagina(); // Chama a função que protege a página
                             <label>Dublado ou Legendado</label>
                         </div>
                         <div class="input-field col s6" style="padding-left: 5px">
-                            <select name="3d" required>
+                            <select name="3d"  >
                                 <option value="" disabled selected>Nenhum</option>
                                 <option value="1">3D</option>
                                 <option value="0">2D</option>
@@ -70,18 +70,18 @@ protegePagina(); // Chama a função que protege a página
                     </div>
                     <div class="row">
                         <div class="input-field col s6" style="padding-right: 5px">
-                            <input id="dateInicial" type="date" class="datepicker" name="data_inicial" required />
+                            <input id="dateInicial" type="date" class="datepicker" name="data_inicial"   />
                             <label for="dateInicial">Data Inicial</label>
                         </div>
                         <div class="input-field col s6" style="padding-left: 5px">
-                            <input id="dateFinal" type="date" class="datepicker" name="data_final" required />
+                            <input id="dateFinal" type="date" class="datepicker" name="data_final"   />
                             <label for="dateFinal">Data Final</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <textarea type="sinopse" class="materialize-textarea" style="max-height: 50px"
-                                name="sinopse" required></textarea>
+                                name="sinopse"  ></textarea>
                             <label for="sinopse">Sinopse</label>
                         </div>
                     </div>
