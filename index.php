@@ -43,13 +43,13 @@
                 </span></div> -->
         </a>
         <a class="carousel-item" href="#three!"><img
-                src="http://cinesiageek.com.br/wp-content/uploads/2019/04/pokemon-detective-pikachu.jpg">
+                src="https://www.vagalume.com.br/dynimage/news38784-big.jpg">
             <!-- <div class="row indicators black"><span class="col s4">Vingadores Ultimato</span><span
                     class="col s4 blue-grey-text"> 180 min </span><span class="col s4 blue-grey-text"> Mais Informacoes
                 </span></div> -->
         </a>
         <a class="carousel-item" href="#four!"><img
-                src="https://cinema.wtf.pt/static/uploads/movie_previews/6ad9bf271d86a1694bf299c31a45eba0389fb3bf.jpg">
+                src="http://www.cinegloria.com.br/wp-content/uploads/2019/05/GODZILLA-II.png">
             <!-- <div class="row indicators black"><span class="col s4">Vingadores Ultimato</span><span
                     class="col s4 blue-grey-text"> 180 min </span><span class="col s4 blue-grey-text"> Mais Informacoes
                 </span></div> -->
