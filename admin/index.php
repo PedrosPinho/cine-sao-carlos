@@ -107,7 +107,7 @@ protegePagina(); // Chama a função que protege a página
                 </ul>
             </div>
         </div>
-        <a title="Login" class="ngl btn-floating btn-large waves-effect waves-light red"><i
+        <a title="Login" href='../index.php' class="ngl btn-floating btn-large waves-effect waves-light red"><i
                 class="material-icons">power_settings_new</i></a>
     </div>
     <script>
