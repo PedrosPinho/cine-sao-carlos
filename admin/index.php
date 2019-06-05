@@ -1,5 +1,5 @@
 <?php
-include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
+include_once("seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
 ?>
 <!DOCTYPE html>
@@ -100,18 +100,10 @@ protegePagina(); // Chama a função que protege a página
                     <li class="collection-header">
                         <h4>Filmes Em Cartaz</h4>
                     </li>
-                    <li class="collection-item">
-                        <div>Filme 1<a href="#!" class="secondary-content"><i class="material-icons">delete</i></a></div>
-                    </li>
-                    <li class="collection-item">
-                        <div>Filme 2<a href="#!" class="secondary-content"><i class="material-icons">delete</i></a></div>
-                    </li>
-                    <li class="collection-item">
-                        <div>Filme 3<a href="#!" class="secondary-content"><i class="material-icons">delete</i></a></div>
-                    </li>
-                    <li class="collection-item">
-                        <div>Filme 4<a href="#!" class="secondary-content"><i class="material-icons">delete</i></a></div>
-                    </li>
+                    <?php
+                        include("get_movies.php");
+                        echo get_list();
+                    ?>
                 </ul>
             </div>
         </div>

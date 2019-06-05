@@ -1,5 +1,8 @@
 <?php
 include("./admin/connect.php");
+date_default_timezone_set ( "America/Sao_Paulo" );
+
+// echo getmovies();
 function get_movies_from_db() {
     $conn = OpenCon();
     $resultado = $conn->query('SELECT * FROM `filme`');
@@ -107,12 +110,12 @@ function getmovies() {
     $week = ["dom", "seg", "ter", "qua", "qui", "sex", "sab"];
     $today = date("w");
     $da = 0;
-    $d = '';
     foreach($week as $day) {
-        $d .= getWeekDay($today, $da);
+        $d = getWeekDay($today, $da);
         $count = 0;
         $cards .= '<div id="'.$day.'" class="col s12">';
         foreach ($movies as $movie){
+            // $cards .= $movie['data_inicio'] ." /-".$d."-/ ".$movie['data_fim'];
             if ($movie['data_inicio'] <= $d && $d <= $movie['data_fim']) {
                 $cards .= make_info_card($movie, $count);
                 $count++;
@@ -126,11 +129,11 @@ function getmovies() {
 function getWeekDay ($today, $day) {
     $day_in_m = 86400000;
     $d = date("Y-m-d");
-    if ($day == $today-1) {
+    if ($day == $today) {
         return $d;
     }
     else {
-        $i = ($today-1) + $day;
+        $i =  $day - $today;
         $data =(int)strtotime("+".$i." day");
         $temp = date("Y-m-d", $data);
         return $temp;

@@ -69,13 +69,13 @@
         <div class="col s1"></div>
         <div class="col s10" style="margin-top: 2%;">
             <ul class="tabs z-depth-1 tabs-fixed-width">
+                <li class="tab"><a href="#dom">Domingo</a></li>
                 <li class="tab"><a href="#seg">Segunda</a></li>
                 <li class="tab"><a href="#ter">Terca</a></li>
                 <li class="tab"><a href="#qua">Quarta</a></li>
                 <li class="tab"><a href="#qui">Quinta</a></li>
                 <li class="tab"><a href="#sex">Sexta</a></li>
                 <li class="tab"><a href="#sab">Sabado</a></li>
-                <li class="tab"><a href="#dom">Domingo</a></li>
             </ul>
             <?php
                 include("./functions/get_movies_week.php");
@@ -225,7 +225,6 @@
             let instance_tabs = M.Tabs.init(elems_tab);
 
             let elems_modal = document.querySelectorAll('.modal');
-            debugger
             let instances_modal = M.Modal.init(elems_modal);
 
         })
