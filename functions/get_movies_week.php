@@ -16,7 +16,7 @@ function get_movies_from_db() {
         return $movies;
       }
 }
-function make_info_card($movie, $count) {
+function make_info_card($movie, $count, $d) {
     $tag;
     if ($count == 0){
         $tag = '<div class="card col s10 offset-s1 m4 offset-m1">
@@ -25,8 +25,8 @@ function make_info_card($movie, $count) {
         </div>
         <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">'.$movie["nome"].'</span>
-        <a href="#trailer" class="modal-trigger">Trailer</a>
-        <div id="trailer" class="modal">
+        <a href="#trailer'.$movie["id"].''.$d.'" class="modal-trigger">Trailer</a>
+        <div id="trailer'.$movie["id"].''.$d.'" class="modal">
         <div class="modal-content">
         <iframe width="600" height="300" src="'.$movie["link_trailer"].'"
             frameborder="0"
@@ -53,8 +53,8 @@ function make_info_card($movie, $count) {
         </div>
         <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">'.$movie["nome"].'</span>
-        <a href="#trailer" class="modal-trigger">Trailer</a>
-        <div id="trailer" class="modal">
+        <a href="#trailer'.$movie["id"].''.$d.'" class="modal-trigger">Trailer</a>
+        <div id="trailer'.$movie["id"].''.$d.'" class="modal">
         <div class="modal-content">
         <iframe width="600" height="300" src="'.$movie["link_trailer"].'"
             frameborder="0"
@@ -81,8 +81,8 @@ function make_info_card($movie, $count) {
         </div>
         <div class="card-content">
         <span class="card-title activator white-text text-darken-4">'.$movie["nome"].'</span>
-        <a href="#trailer" class="modal-trigger">Trailer</a>
-        <div id="trailer" class="modal">
+        <a href="#trailer'.$movie["id"].''.$d.'" class="modal-trigger">Trailer</a>
+        <div id="trailer'.$movie["id"].''.$d.'" class="modal">
         <div class="modal-content">
         <iframe width="600" height="300" src="'.$movie["link_trailer"].'"
             frameborder="0"
@@ -117,7 +117,7 @@ function getmovies() {
         foreach ($movies as $movie){
             // $cards .= $movie['data_inicio'] ." /-".$d."-/ ".$movie['data_fim'];
             if ($movie['data_inicio'] <= $d && $d <= $movie['data_fim']) {
-                $cards .= make_info_card($movie, $count);
+                $cards .= make_info_card($movie, $count, $day);
                 $count++;
             }
         }
