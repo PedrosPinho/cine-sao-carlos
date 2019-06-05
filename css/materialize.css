@@ -4919,8 +4919,9 @@ small {
 }
 
 .card .card-content {
-  padding: 14px;
+  padding-bottom: 14px;
   border-radius: 0 0 2px 2px;
+  background-color: black;
 }
 
 .card .card-content p {

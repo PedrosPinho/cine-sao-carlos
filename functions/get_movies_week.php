@@ -80,7 +80,7 @@ function make_info_card($movie, $count) {
         <img class="activator" src="./functions/imageView.php?image_id='.$movie["id"].'">
         </div>
         <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">'.$movie["nome"].'</span>
+        <span class="card-title activator white-text text-darken-4">'.$movie["nome"].'</span>
         <a href="#trailer" class="modal-trigger">Trailer</a>
         <div id="trailer" class="modal">
         <div class="modal-content">
